@@ -1,19 +1,19 @@
 # Projeto de uma loja virtual utilizando React e JS
 
-# Tecnologias
+## Tecnologias
 
 - React
 - React Router DOM
 - Context API (AuthContext, CartContext, ThemeContext)
 
-# Clone o repositório
+## Clone o repositório
 git clone https://github.com/Gabrielfercosta/ecommerce-react.git
 
-# Entre na pasta
+## Entre na pasta
 cd projeto-ecommerce
 
-# Faça a instalação da dependência
+## Faça a instalação da dependência
 npm install
 
-# Rode
+## Rode
 npm run dev

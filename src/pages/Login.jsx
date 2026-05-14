@@ -1,14 +1,15 @@
 import { useState } from "react"
-import { useContext } from "react"
-import { AuthContext } from "../contexts/AuthContext"
-import { Navigate } from "react-router-dom"
+import { Navigate, useLocation } from "react-router-dom"
+import { useAuth } from "../contexts/AuthContext"
 
 function Login() {
     const [nome, setNome] = useState("")
-    const { login } = useContext(AuthContext) 
-    const { logado } = useContext(AuthContext)
+    const { login, logado } = useAuth()
+    const location = useLocation()
 
-    if (logado) return <Navigate to="/" />
+    const destino = location.state?.from?.pathname || "/"
+
+    if (logado) return <Navigate to={destino} replace />
     
     return (
         <div className="login-container">

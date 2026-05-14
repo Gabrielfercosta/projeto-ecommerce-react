@@ -2,13 +2,13 @@ import { useContext } from "react"
 import { ThemeContext } from "../contexts/ThemeContext"
 import { Link } from "react-router-dom"
 import { CartContext } from "../contexts/CartContext";
-import { AuthContext } from "../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext";
 
 function Navbar() {
 
   const { interruptor, alternarInterruptor } = useContext(ThemeContext);
   const { qntProdutos } = useContext(CartContext);
-  const { usuario, logout } = useContext(AuthContext);
+  const { usuario, logout } = useAuth();
 
   return (
     <nav className="navbar">
